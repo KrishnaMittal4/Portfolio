@@ -1,0 +1,4 @@
+Place the latest resume PDF in this folder with exactly this filename:
+KrishnaMittal_Resume.pdf
+
+The navbar and hero Resume buttons are already linked to /KrishnaMittal_Resume.pdf.
