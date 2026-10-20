@@ -110,29 +110,11 @@ export default function Navbar({
         <span /><span /><span />
       </button>
 
-      {/* Right Action: Clean Direct Contact CTA */}
+      {/* Right Action: Resume Download */}
       <div className="nav-actions-desktop" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <a href={socials?.resume || "/KrishnaMittal_Resume.pdf"} download className="btn-secondary" style={{ padding: "7px 14px", fontSize: ".8rem", borderRadius: "20px", display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none" }}>
+        <a href={socials?.resume || "/KrishnaMittal_Resume.pdf"} download className="btn-sculk" style={{ padding: "7px 18px", fontSize: ".82rem", borderRadius: "20px", display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none", fontWeight: "600" }}>
           <Download size={14} /><span>Resume</span>
         </a>
-        <button
-          onClick={() => onNavigate(4)}
-          className="btn-sculk"
-          style={{
-            padding: "7px 18px",
-            fontSize: "0.82rem",
-            fontWeight: "600",
-            borderRadius: "20px",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            cursor: "pointer",
-            boxShadow: "0 0 16px rgba(99, 102, 241, 0.25)"
-          }}
-        >
-          <span>Get in Touch</span>
-          <ArrowUpRight size={14} />
-        </button>
       </div>
     </header>
 

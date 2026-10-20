@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ArrowDown, Flame, Sparkles, Download } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
 // Typing animation hook
@@ -109,13 +109,7 @@ export default function HeroSection({ profile, socials, onNavigate, onOpenSettin
 
       <div className="interactive-panel section-reveal" style={{ maxWidth: "900px", margin: "0 auto", position: "relative", zIndex: 1, width: "100%" }}>
 
-        {/* Status Badge */}
-        <div style={{ marginBottom: "22px" }} className="section-reveal section-reveal-delay-1">
-          <span className="badge-sculk pulse-glow">
-            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--sculk-primary)", display: "inline-block", boxShadow: "0 0 10px var(--sculk-primary)" }} />
-            <span>✦ AVAILABLE FOR SOFTWARE &amp; AI/ML ROLES • 2026/2027</span>
-          </span>
-        </div>
+
 
         {/* Typing Hero Title */}
         <h1
@@ -213,23 +207,6 @@ export default function HeroSection({ profile, socials, onNavigate, onOpenSettin
             </a>
           )}
 
-          <button
-            className="btn-secondary"
-            onClick={() => onNavigate(1)}
-            style={{ border: "1px solid rgba(56, 189, 248, 0.4)", color: "#e0f2fe" }}
-          >
-            <Sparkles size={18} color="#38bdf8" />
-            <span>About &amp; Experience</span>
-          </button>
-
-          <button
-            className="btn-secondary"
-            onClick={() => onNavigate(4)}
-            style={{ border: "1px solid rgba(147, 51, 234, 0.4)", color: "#e9d5ff" }}
-          >
-            <Flame size={18} color="#c084fc" />
-            <span>Get in Touch</span>
-          </button>
         </div>
 
       </div>
