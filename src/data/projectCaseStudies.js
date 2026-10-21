@@ -240,8 +240,8 @@ export const PROJECT_CASE_STUDIES = {
     subtitle: "Financial Sentiment NLP & 18-Feature Machine Learning Market-Direction Predictor",
     badge: "FinBERT • XGBoost • FastAPI • IBM Internship",
     badgeColor: "#c084fc",
-    github: "https://github.com/KrishnaMittal4",
-    live: null,
+    github: "https://github.com/KrishnaMittal4/SentiStock-Sentiment-Analysis",
+    live: "https://sentistock-sentiment-analysis-front.vercel.app/",
     stats: "18-Feature ML Pipeline • FinBERT NLP • Explainable APIs",
     overview: {
       problem: "Traditional market indicators rely solely on historical price momentum, while raw news sentiment from general-purpose NLP models misinterprets financial dialect.",

@@ -82,12 +82,12 @@ export const DEFAULT_PORTFOLIO_DATA = {
       title: "SentiStock AI — Stock Market Analytics",
       subtitle: "AI-Powered Financial Sentiment & 18-Feature Directional Prediction",
       category: "Fintech & Machine Learning",
-      description: "Developed during IBM internship: An AI-powered financial analytics system combining FinBERT domain-specific sentiment, technical indicators, and an 18-feature machine learning ensemble (XGBoost, LightGBM, Random Forest) with FastAPI endpoints.",
-      tech: ["Python", "FinBERT", "XGBoost", "LightGBM", "Random Forest", "FastAPI", "yfinance"],
+      description: "Developed during IBM internship: An AI-powered financial analytics platform combining FinBERT domain-specific sentiment, technical indicators (TA-Lib), and an 18-feature machine learning ensemble with FastAPI REST backend and PostgreSQL caching.",
+      tech: ["FastAPI", "Python", "FinBERT", "PyTorch", "TA-Lib", "XGBoost", "PostgreSQL", "yfinance"],
       featured: true,
       stats: "18-Feature ML • FinBERT NLP • Explainable APIs",
-      github: "https://github.com/KrishnaMittal4",
-      live: null,
+      github: "https://github.com/KrishnaMittal4/SentiStock-Sentiment-Analysis",
+      live: "https://sentistock-sentiment-analysis-front.vercel.app/",
       badgeColor: "#c084fc"
     }
   ],
