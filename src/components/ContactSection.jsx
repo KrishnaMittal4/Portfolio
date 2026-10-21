@@ -59,13 +59,7 @@ export default function ContactSection({ socials, profile }) {
             textAlign: "center"
           }}
         >
-          {/* Availability Status Badge */}
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "6px 16px", borderRadius: "20px", background: "rgba(99, 102, 241, 0.12)", border: "1px solid rgba(99, 102, 241, 0.3)", marginBottom: "28px" }}>
-            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--sculk-primary)", boxShadow: "0 0 10px var(--sculk-primary)" }} />
-            <span style={{ fontSize: "0.85rem", color: "#ffffff", fontWeight: "600", fontFamily: "var(--font-mono)" }}>
-              {profile.status || "AVAILABLE FOR AI/ML & FULL-STACK ROLES • 2026"}
-            </span>
-          </div>
+
 
           {/* Primary Email Highlight Card */}
           <div

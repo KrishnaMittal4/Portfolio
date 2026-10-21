@@ -54,9 +54,7 @@ export default function Navbar({
             {currentMeta.titleMain}
             <span className="sculk-gradient-text">{currentMeta.titleGrad}</span>
           </span>
-          <div style={{ fontSize: "0.68rem", color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}>
-            {currentMeta.sub}
-          </div>
+
         </div>
       </div>
 
