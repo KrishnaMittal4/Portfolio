@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect, useRef } from "react";
 
-const StudioScene = lazy(() => import("./three/StudioScene"));
 const AncientCityScene = lazy(() => import("./three/AncientCityScene"));
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -13,20 +12,8 @@ import { loadPortfolioData } from "./data/portfolioData";
 
 export default function App() {
   const [portfolioData] = useState(() => loadPortfolioData());
-  const [theme, setTheme] = useState(() => {
-    try {
-      return localStorage.getItem("km_portfolio_theme") || "studio";
-    } catch {
-      return "studio";
-    }
-  });
-
-  const handleSelectTheme = (newTheme) => {
-    setTheme(newTheme);
-    try {
-      localStorage.setItem("km_portfolio_theme", newTheme);
-    } catch {}
-  };
+  // Ancient City is the only public theme. Studio remains in the source for easy restoration later.
+  const theme = "ancient";
 
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState(0);
@@ -145,24 +132,15 @@ export default function App() {
       {/* Decorative 3D background is deferred so core portfolio content loads first. */}
       {sceneReady && !reducedMotion && (
         <Suspense fallback={null}>
-          {theme === "ancient" ? (
-            <AncientCityScene
-              scrollProgress={scrollProgress}
-              activeSection={activeSection}
-              isFreeRoam={false}
-              quality={sceneQuality}
-              projects={portfolioData.projects}
-              hoveredProjectId={hoveredProjectId}
-              onSelectProject={(id) => setActiveCaseStudyId(id)}
-            />
-          ) : (
-            <StudioScene
-              scrollProgress={scrollProgress}
-              activeSection={activeSection}
-              isFreeRoam={false}
-              quality={sceneQuality}
-            />
-          )}
+          <AncientCityScene
+            scrollProgress={scrollProgress}
+            activeSection={activeSection}
+            isFreeRoam={false}
+            quality={sceneQuality}
+            projects={portfolioData.projects}
+            hoveredProjectId={hoveredProjectId}
+            onSelectProject={(id) => setActiveCaseStudyId(id)}
+          />
         </Suspense>
       )}
 
@@ -176,7 +154,6 @@ export default function App() {
         onNavigate={scrollToSection}
         socials={portfolioData.socials}
         currentTheme={theme}
-        onSelectTheme={handleSelectTheme}
       />
 
       {/* Scrollable Content Sections */}
